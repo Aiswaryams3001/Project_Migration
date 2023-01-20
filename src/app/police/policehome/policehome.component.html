@@ -1,0 +1,22 @@
+<div class="sidebar">
+    <h3></h3>  
+    <a [routerLink]="['/policehome']" class="active">Home</a>
+    <a  [routerLink]="['/policehome/policeview']">View Applications</a>
+   
+    <a [routerLink]="['/home']">Logout</a>
+  </div>
+  <div class="main">
+  <h3>WELCOME</h3>
+  <div class="row">
+  <div class="col-sm-4">           
+                <div div class="col-sm-12 text-right" style="background-color: #04AA6D;
+                color: white;;height:50px;">
+                    <div>Applications</div>
+                </div>
+            
+            <div class="col-sm-12 text-left" style="background-color: whitesmoke;height:50px;">
+              <a style="color: rgb(90, 144, 190);" [routerLink]="['/policehome/policeview']"> ViewApplications</a>            
+            </div>
+  </div>
+  </div>
+  </div>

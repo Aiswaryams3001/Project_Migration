@@ -95,10 +95,15 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/main.js"
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "d4a1529f-f2d3-45ca-a15e-f864c6fe05ca"
   }
 }

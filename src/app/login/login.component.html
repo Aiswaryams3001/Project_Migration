@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+        <form [formGroup]="loginForm">
+            <label for="chk" aria-hidden="true">Sign In</label>
+            <input type="text" formControlName="Username"  name="Username" placeholder="Username" required="">
+            <small *ngIf="loginForm.controls['Username'].dirty && loginForm.hasError('required','Username')" class="text-danger">*Username is required</small>
+            <input type="password"  formControlName="Password" (click)="hideShowPass()" name="Password" placeholder="Password" required="">
+            <small *ngIf="loginForm.controls['Password'].dirty && loginForm.hasError('required','Password')" class="text-danger">*Password is required</small>
+            <input  style="background-color:rgb(195, 193, 207);color: red;text-align: center; letter-spacing: 8px;" type="text" class="form-control" readonly id="capt">
+            <input type="text" class="form-control" id="textinput" placeholder="Enter captcha">
+            <button  (click)="onLogin()">Login</button>
+            <h6 style="text-align: center;">Captcha not visible? <img src="https://img.icons8.com/fluency/512/update-left-rotation.png" width="40px" onclick="cap()"/></h6>
+        </form>
+        
+	</div>
+</body>
+</html>

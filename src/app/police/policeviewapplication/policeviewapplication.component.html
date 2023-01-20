@@ -1,0 +1,61 @@
+<div class="container mt-3">
+  <h2>Application Details</h2>
+<form>
+  <table style="width: 500px;height: 40px;">
+    <tr>
+      <td>Search By:</td>
+  
+      <td>
+        <select #teams class="form-control" id="myselection" (change)="onSelectStatus(teams.value)">
+          <option>--Select--</option>
+          <option>Application Send to Police for verification</option>
+          <option>Application Verified</option>          
+          <option>Application not Verified </option>
+        </select>
+      </td>
+    </tr>
+  </table>
+</form>
+
+<form id="business">
+    <div class="container mt-3" style="text-align: center;">
+      <ng-container *ngIf="this.Dataarray.length > 0; then loggedIn; else loggedOut">
+      </ng-container>
+      <ng-template #loggedIn>  
+        <table class="table" border="1">
+        <thead>
+          <th>SL Number </th>
+          <th>First Name </th>
+          <th>Last Name </th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Status</th>
+          <th>Remarks</th>
+          <th>Police Date of verification</th>
+          <th>User Date of Application</th>
+          <th>View more</th>
+          <th></th>
+          <th></th>
+          </thead>
+            <tr *ngFor="let item of Dataarray let i=index">
+             
+                <td> {{i+1}} </td>
+                <td> {{item.firstName}}</td>
+                <td> {{item.lastName}} </td>
+                <td> {{item.email}} </td>
+                <td> {{item.phone}} </td>
+                <td> {{item.status}} </td>
+                <td>{{item.remarks}}</td>
+                <td>{{item.policeDate}}</td>
+                <td>{{item.fromDate}}</td>
+                <td><a [routerLink]="['/policehome/policeviewmore',item.applicationId]">View Application</a></td>
+               <td> <button [routerLink]="['/policehome/policeeditsts',item.applicationId]">Edit Status</button></td>
+               <td><button [routerLink]="['/policehome/policeremarks',item.applicationId]">SetRemarks</button></td>
+            </tr>
+        </table>
+      </ng-template>
+
+      <br/><br/>
+      <ng-template #loggedOut>No Data Found</ng-template>
+      </div>
+      </form>

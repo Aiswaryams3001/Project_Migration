@@ -1,0 +1,27 @@
+<div class="container mt-3">
+    <h2>Application Details</h2>
+    <table class="table" border="1" class="table">
+    <thead>
+      <th>SL Number </th>
+      <th>First Name </th>
+      <th>Last Name </th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Status</th>
+      <th>View more</th>
+      <th></th>
+      <th></th>
+      </thead>
+        <tr *ngFor="let item of Dataarray let i=index">
+         
+            <td> {{i+1}} </td>
+            <td> {{item.firstName}}</td>
+            <td> {{item.lastName}} </td>
+            <td> {{item.email}} </td>
+            <td> {{item.phone}} </td>
+            <td> {{item.status}} </td>
+            <td><a [routerLink]="['/userhome/userviewmore',item.applicationId]">View Application</a></td>
+            <td> <button [routerLink]="['/userhome/useredit',item.applicationId]">Edit Application</button></td>
+        </tr>
+    </table>
+  </div>

@@ -1,0 +1,273 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<form [formGroup]="registerForm" class="border p-3 rounded-3">
+
+    <div class="row g-0">
+
+        <div class="col text-center p-2 mb-3 bg-light">
+
+            <span class="fs-3">Application Details</span>
+
+        </div>
+
+        <div class="row">
+    </div>
+    <div class="col mb-3">
+        <input type="hidden" formControlName="applicationId" class="form-control" id="applicationId" [disabled]="!registerForm.valid">
+
+    </div>
+    </div>
+    <div class="row">
+        <div class="col mb-3">
+
+            <label for="firstname" class="form-label">First Name</label>
+
+            <input  type="text" formControlName="firstName" class="form-control" id="firstname" [disabled]="!registerForm.valid">
+
+        </div>
+
+        <div class="col mb-3">
+
+            <label for="lastname" class="form-label">Last Name</label>
+
+            <input type="text" class="form-control" id="Lastname" formControlName="lastName" [disabled]="!registerForm.valid">
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col mb-3">
+
+            <label for="email" class="form-label">Email address</label>
+
+            <input type="email" class="form-control" id="Email" formControlName="email" [disabled]="!registerForm.valid">
+
+            <div class="form-text"></div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col mb-3">
+
+            <label for="mobile" class="form-label">Mobile Number</label>
+
+            <input type="text" formControlName="phone" class="form-control" id="mobile" [disabled]="!registerForm.valid">
+
+            <div class="form-text"></div>
+
+        </div>
+
+        <div class="col ps-3 mb-3">
+
+            <div class="m-1">Gender</div>
+
+            <div class="form-check form-check-inline">
+
+                <input type="radio" class="form-check-input" value="Male" id="male" formControlName="gender" [disabled]="!registerForm.valid">
+
+                <label class="form=check-label" for="male">Male</label>
+
+            </div>
+
+            <div class="form-check form-check-inline">
+
+                <input type="radio" class="form-check-input" value="Female" id="female" formControlName="gender" [disabled]="!registerForm.valid">
+
+                <label class="form=check-label" for="female">Female</label>
+
+            </div>
+
+        </div>
+        <div class="col mb-3">
+
+            <label for="mobile" class="form-label">Dob</label>
+
+            <input type="date" formControlName="date" class="form-control" id="mobile" [disabled]="!registerForm.valid">
+
+            <div class="form-text"></div>
+
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col mb-3">
+
+            <label for="pwd" class="form-label">AddressLine 1</label>
+
+            <input type="text" formControlName="address1" class="form-control" id="pwd" [disabled]="!registerForm.valid">
+
+            <div class="form-text"></div>
+
+        </div>
+
+        <div class="col mb-3">
+
+            <label for="pwd" class="form-label">AddressLine 2</label>
+
+            <input type="text" formControlName="address2" class="form-control" id="rpwd" [disabled]="!registerForm.valid">
+
+            <div class="form-text"></div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col mb-3">
+
+            <label for="pwd" class="form-label">City</label>
+
+            <input type="text" formControlName="city" class="form-control" id="city" [disabled]="!registerForm.valid">
+
+            <div class="form-text"></div>
+
+        </div>
+
+        <div class="col mb-3">
+
+            <label for="pwd" class="form-label">District</label>
+
+
+            <select class="form-control" id="District" formControlName="district" [disabled]="!registerForm.valid">
+
+                <option>Kasargod</option>
+
+                <option>Kannur</option>
+
+                <option>Wayanad</option>
+
+                <option>Kozhikode</option>
+
+                <option>Malappuram</option>
+
+                <option>Palakkad</option>
+
+                <option>Thrissur</option>
+
+                <option>Ernakulam</option>
+
+                <option>Idukki</option>
+
+                <option>Kottayam</option>
+
+                <option>Alappuzha</option>
+
+                <option>Pathanamthitta</option>
+
+                <option>Kollam</option>
+
+                <option>Thiruvananthapuram</option>
+
+            </select>
+
+            <div class="form-text"></div>
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col mb-3">
+
+            <div class="col mb-3">
+                <label for="state">State</label>
+
+                <select class="form-control" id="State" formControlName="state" [disabled]="!registerForm.valid">
+
+                    <option>Kerala</option>
+                </select>
+                <div class="form-text"></div>
+
+            </div>
+
+            <div class="form-text"></div>
+
+        </div>
+
+
+        <div class="col mb-3">
+
+            <label for="pwd" class="form-label">Pincode</label>
+
+            <input type="text" formControlName="pincode" class="form-control" id="rpwd" [disabled]="!registerForm.valid">
+
+            <div class="form-text"></div>
+
+        </div>
+    </div>
+
+
+
+    <div class="row">
+
+        <div class="col mb-3">
+            <label for="state">Place to migrate</label>
+
+            <select class="form-control" id="state" formControlName="place_to_Migrate" [disabled]="!registerForm.valid">
+
+                <option>Kasargod</option>
+
+                <option>Kannur</option>
+
+                <option>Wayanad</option>
+
+                <option>Kozhikode</option>
+
+                <option>Malappuram</option>
+
+                <option>Palakkad</option>
+
+                <option>Thrissur</option>
+
+                <option>Ernakulam</option>
+
+                <option>Idukki</option>
+
+                <option>Kottayam</option>
+
+                <option>Alappuzha</option>
+
+                <option>Pathanamthitta</option>
+
+                <option>Kollam</option>
+
+                <option>Thiruvananthapuram</option>
+
+            </select>
+            <div class="form-text"></div>
+
+        </div>
+
+        <div class="col mb-3">
+
+            <label for="pwd" class="form-label">Purpose of Migration</label>
+
+            <input type="text" formControlName="purpose_to_Migrate" class="form-control" id="rpwd" [disabled]="!registerForm.valid">
+
+            <div class="form-text"></div>
+
+        </div>
+    </div>
+
+
+    <div class="row">
+
+        <div class="col mb-3">
+
+            <label for="pwd" class="form-label">Adhar Number</label>
+
+            <input type="text" formControlName="aadharNumber" class="form-control" id="exampleInputAadharCard"
+            [disabled]="!registerForm.valid">
+            <small id="message" class="form-text text-muted"></small>
+            <div class="form-text"></div>
+
+        </div>
+
+    </div>
+</form>

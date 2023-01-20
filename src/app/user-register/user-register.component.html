@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form [formGroup]="RegForm">
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<input type="text" name="firstname" placeholder="First Name" required="" formControlName="Firstname">
+					<input type="text" name="lastname" placeholder="Last Name" required="" formControlName="Lastname">
+					<input type="email" name="email" placeholder="Email" required="" formControlName="Email">
+                    <input type="text" name="phn" placeholder="Phone" required="" formControlName="Phone">
+                    <input type="text" name="txt" placeholder="Username" required="" formControlName="Username">
+					<input type="password" name="pswd" placeholder="Password" required="" formControlName="Password">
+                    <input type="password" name="confirmpswd" placeholder="Confirm Password" required="" formControlName="ConfirmPassword">
+					<button type="submit" (click)="Onsubmit()" [disabled]="!RegForm.valid">Sign up</button>
+				</form>
+			</div>		
+	</div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<form  [formGroup]="EditstsbypoliceForm">
+
+    <div class="col">
+        <div class="row mb-3">
+            <input type="hidden" formControlName="applicationId">
+    
+            </div>
+        <div class="row mb-3">
+            <label for="status">Status</label>
+    
+            <select class="form-control" id="status" formControlName="Status">          
+                <option>Application Verified</option>          
+                <option>Application not Verified </option>
+              
+                 
+            </select>
+            <div class="form-text"></div>
+        </div>
+        <div class="row mb-3">
+          
+        <button (click)="editStsbyPolice()">Submit</button>
+                       
+        <div class="form-text"></div>
+        </div>
+    
+        </div>
+        <input type="hidden" formControlName="Firstname" class="form-control" id="firstname">
+        <input type="hidden" class="form-control" id="Lastname" formControlName="Lastname">
+    
+               
+    
+                <input type="hidden" class="form-control" id="Email" formControlName="Email">
+    
+    
+               
+    
+                <input type="hidden" formControlName="phone" class="form-control" id="mobile">
+    
+              
+    
+                    <input type="hidden" class="form-check-input" value="Male" id="male" formControlName="gender">
+    
+                   
+                    <input type="hidden" class="form-check-input" value="Female" id="female" formControlName="gender">
+    
+                    
+    
+                <input type="hidden" formControlName="date" class="form-control" id="mobile">
+    
+               
+    
+                <input type="hidden" formControlName="Address1" class="form-control" id="pwd">
+    
+              
+                <input type="hidden" formControlName="Address2" class="form-control" id="rpwd">
+    
+    
+                <input type="hidden" formControlName="City" class="form-control" id="city">
+    
+            
+    
+    
+                <select hidden class="form-control" id="District" formControlName="District">
+    
+                    <option>Kasargod</option>
+    
+                    <option>Kannur</option>
+    
+                  
+    
+                </select>
+    
+        
+    
+                    <select hidden class="form-control" id="State" formControlName="State">
+    
+                        <option>Kerala</option>
+                    </select>
+                  
+    
+                <input type="hidden" formControlName="Pincode" class="form-control" id="rpwd">
+    
+             
+    
+                <select hidden class="form-control" id="state" formControlName="place_to_Migrate">
+    
+                    <option>Kasargod</option>
+    
+                    <option>Kannur</option>
+    
+                    <option>Wayanad</option>
+    
+                    <option>Kozhikode</option>
+    
+                  
+    
+                </select>
+              
+    
+                <input type="hidden" formControlName="purpose_to_Migrate" class="form-control" id="rpwd">
+    
+    
+                <input type="hidden" formControlName="AadharNumber" class="form-control" id="exampleInputAadharCard">
+          
+    
+        </form>

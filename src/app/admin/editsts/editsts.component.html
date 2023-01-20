@@ -1,0 +1,112 @@
+<form  [formGroup]="EditstsForm">
+
+    <div class="col">
+        <div class="row mb-3">
+            <input type="hidden" formControlName="applicationId">
+    
+            </div>
+        <div class="row mb-3">
+            <label for="status">Status</label>
+    
+            <select class="form-control" id="status" formControlName="status">          
+                <option>Application Approved</option>          
+                <option>Application Pending due to insufficient data</option>
+                <option>Application Rejected </option>
+                 
+            </select>
+            <div class="form-text"></div>
+        </div>
+        <div class="row mb-3">
+            <label for="Date">Approved Date</label>
+    
+            <input type="date" id="date" formControlName="AdminDate">
+            <div class="form-text"></div>
+        </div>
+        <div class="row mb-3">
+          
+        <button (click)="EditSts()">Submit</button>
+                       
+        <div class="form-text"></div>
+        </div>
+    
+    </div>
+        <input type="hidden" formControlName="firstName" class="form-control" id="firstname">
+        <input type="hidden" class="form-control" id="Lastname" formControlName="lastName">
+    
+               
+    
+                <input type="hidden" class="form-control" id="Email" formControlName="email">
+    
+    
+               
+    
+                <input type="hidden" formControlName="phone" class="form-control" id="mobile">
+    
+              
+    
+                    <input type="hidden" class="form-check-input" value="Male" id="male" formControlName="gender">
+    
+                   
+                    <input type="hidden" class="form-check-input" value="Female" id="female" formControlName="gender">
+    
+                    
+    
+                <input type="hidden" formControlName="date" class="form-control" id="mobile">
+    
+               
+    
+                <input type="hidden" formControlName="address1" class="form-control" id="pwd">
+    
+              
+                <input type="hidden" formControlName="address2" class="form-control" id="rpwd">
+    
+    
+                <input type="hidden" formControlName="city" class="form-control" id="city">
+    
+            
+    
+    
+                <select hidden class="form-control" id="District" formControlName="district">
+    
+                    <option>Kasargod</option>
+    
+                    <option>Kannur</option>
+    
+                  
+    
+                </select>
+    
+        
+    
+                    <select hidden class="form-control" id="State" formControlName="state">
+    
+                        <option>Kerala</option>
+                    </select>
+                  
+    
+                <input type="hidden" formControlName="pincode" class="form-control" id="rpwd">
+    
+             
+    
+                <select hidden class="form-control" id="state" formControlName="place_to_Migrate">
+    
+                    <option>Kasargod</option>
+    
+                    <option>Kannur</option>
+    
+                    <option>Wayanad</option>
+    
+                    <option>Kozhikode</option>
+    
+                  
+    
+                </select>
+              
+    
+                <input type="hidden" formControlName="purpose_to_Migrate" class="form-control" id="rpwd">
+    
+    
+                <input type="hidden" formControlName="aadharNumber" class="form-control" id="exampleInputAadharCard">
+          
+    
+</form>
